@@ -1,0 +1,16 @@
+<package>
+  <description brief="rocket_driver">
+
+     rocket_driver
+
+  </description>
+  <author>Austin Hendrix</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/rocket_driver</url>
+  <depend package="rospy"/>
+  <depend package="rocket_msgs"/>
+
+</package>
+
+
