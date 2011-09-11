@@ -11,6 +11,8 @@
   <depend package="rospy"/>
   <depend package="rocket_msgs"/>
 
+  <rosdep name="pyusb"/>
+
 </package>
 
 
