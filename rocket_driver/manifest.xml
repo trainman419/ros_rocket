@@ -10,6 +10,7 @@
   <url>http://ros.org/wiki/rocket_driver</url>
   <depend package="rospy"/>
   <depend package="rocket_msgs"/>
+  <depend package="std_msgs"/>
 
   <rosdep name="pyusb"/>
 
