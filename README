@@ -1,0 +1,28 @@
+ros_rocket:
+
+A ROS driver for the dream cheeky style USB nerf turrets.
+
+
+Since these USB turrets only have encoders for position feedback (and sometimes even those don't work very well), the position of the turret is determined entirely based on timing. The driver determines the timing parameters for your turret by running it back and forth between the end-stops 10 times at startup. The driver also keeps an estimate of the accumulated positioning error based on the standard deviation between the calibration runs; it resets the error metric whenever it reaches on of the end-stops.
+
+The driver can be run with 'rosrun rocket_driver rocket_driver.py'
+
+Topics:
+rocket_command:
+   type: rocket_msgs/RocketCommand
+      alpha: yaw angle
+      beta:  pitch angle
+   The driver takes commands on the rocket_command topic
+
+rocket_position:
+   type: rocket_msgs/RocketPosition
+      alpha:     estimated yaw angle
+      beta:      estimated pitch angle
+      alpha_var: accumulated error in alpha
+      beta_var:  accumulated error in beta
+   The driver publishes the current position estimate and the estimated error on the rocket_position topic
+
+Services:
+rocket_fire:
+   type: std_msgs/Empty
+   Fire a single rocket

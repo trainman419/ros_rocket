@@ -1,7 +1,0 @@
-int8 DOWN=0
-int8 UP=1
-int8 LEFT=2
-int8 RIGHT=3
-int8 dir
-duration time
----
