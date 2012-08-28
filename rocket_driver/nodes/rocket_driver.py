@@ -83,7 +83,9 @@ class RocketDriver:
       self.launcher.start_movement(0)
       self.launcher.start_movement(1)
       self.launcher.stop_movement()
+      rospy.sleep(0.1)
       self.launcher.check_limits()
+      rospy.sleep(0.1)
       self.firing = False
       return EmptyResponse() 
    
@@ -164,8 +166,11 @@ class RocketDriver:
       d = None
       cmd_start = rospy.Time.now()
       while not rospy.is_shutdown():
-         # update position estimates
-         limits = self.launcher.check_limits()
+         if not self.firing:
+            # update position estimates
+            limits = self.launcher.check_limits()
+         else:
+            limits = (False, False, False, False)
          if limits[LEFT]:
             self.alpha = ALPHA_HOME
             self.alpha_var = 0
