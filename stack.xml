@@ -1,9 +1,12 @@
 <stack>
-  <description brief="pyrocket">pyrocket</description>
-  <author>Maintained by Austin Hendrix</author>
-  <license>BSD</license>  
-  <review status="unreviewed" notes=""/>
-  <url>http://ros.org/wiki/pyrocket</url>
-  <depend stack="ros" />
+   <description brief="ros_rocket">
+      ROS drivers for the ever-popular USB Rocket launchers from Dream Cheeky.
+   </description>
+   <author>Austin Hendrix</author>
+   <license>BSD</license>  
+   <review status="unreviewed" notes=""/>
+   <url>http://ros.org/wiki/ros_rocket</url>
+   <depend stack="ros" />
+   <depend stack="ros-comm" /> <!-- rospy, std_srvs -->
 
 </stack>

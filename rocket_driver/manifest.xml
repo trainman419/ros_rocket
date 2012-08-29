@@ -1,7 +1,7 @@
 <package>
   <description brief="rocket_driver">
 
-     rocket_driver
+      A ROS driver for the ever-popular Dream Cheeky USB Rocket launchers.
 
   </description>
   <author>Austin Hendrix</author>
@@ -10,7 +10,7 @@
   <url>http://ros.org/wiki/rocket_driver</url>
   <depend package="rospy"/>
   <depend package="rocket_msgs"/>
-  <depend package="std_msgs"/>
+  <depend package="std_srvs"/>
 
   <rosdep name="pyusb"/>
 
